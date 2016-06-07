@@ -143,12 +143,23 @@
 <script>
 var cb = function() {
 var l = document.createElement('link'); l.rel = 'stylesheet';
-l.href = ['css/style.css', 'css/bootstrap-grid.css'];
+l.href = 'css/style.css';
 var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
 };
 var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 webkitRequestAnimationFrame || msRequestAnimationFrame;
 if (raf) raf(cb);
+else window.addEventListener('load', cb);
+</script>
+<script>
+var cb1 = function() {
+var l = document.createElement('link'); l.rel = 'stylesheet';
+l.href = 'css/bootstrap-grid.css';
+var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+};
+var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf) raf(cb1);
 else window.addEventListener('load', cb);
 </script>
   <script type="text/javascript" src="js/main.js"></script>
