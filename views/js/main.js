@@ -231,9 +231,9 @@ var resizePizzas = function(size) {
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName
     function changePizzaSizes(size) {
         var pizzaContainerLength = document.getElementsByClassName()(".randomPizzaContainer").length;
+        var dx = determineDx(pizzaContainerLength[i], size);
+        var newwidth = (pizzaContainerLength[i].offsetWidth + dx) + 'px';
         for (var i = 0; i < pizzaContainerLength; i++) {
-            var dx = determineDx(pizzaContainerLength[i], size);
-            var newwidth = (pizzaContainerLength[i].offsetWidth + dx) + 'px';
             pizzaContainerLength[i].style.width = newwidth;
         }
     }
