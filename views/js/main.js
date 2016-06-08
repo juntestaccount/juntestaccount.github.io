@@ -230,13 +230,20 @@ var resizePizzas = function(size) {
 // I decided to change querySelectorAll to getElementsByClassName()
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName
     function changePizzaSizes(size) {
-        for (var i = 0; i < document.getElementsByClassName()(".randomPizzaContainer").length; i++) {
-            var dx = determineDx(document.getElementsByClassName()(".randomPizzaContainer")[i], size);
-            var newwidth = (document.getElementsByClassName()(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-            document.getElementsByClassName()(".randomPizzaContainer")[i].style.width = newwidth;
+        var pizzaContainerLength = document.getElementsByClassName()(".randomPizzaContainer").length;
+        for (var i = 0; i < pizzaContainerLength; i++) {
+            var dx = determineDx(pizzaContainerLength[i], size);
+            var newwidth = (pizzaContainerLength[i].offsetWidth + dx) + 'px';
+            pizzaContainerLength[i].style.width = newwidth;
         }
     }
     changePizzaSizes(size);
+
+
+
+
+
+
     window.performance.mark("mark_end_resize");
     window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
     var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
