@@ -229,10 +229,11 @@ var resizePizzas = function(size) {
 // https://www.nczonline.net/blog/2010/09/28/why-is-getelementsbytagname-faster-that-getElementsByClassName()/
 // I decided to change querySelectorAll to getElementsByClassName()
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName
-    function changePizzaSizes(size) {
-        var pizzaContainerLength = document.getElementsByClassName()(".randomPizzaContainer").length;
+        var pizzaContainer = document.getElementsByClassName()(".randomPizzaContainer");
+        var pizzaContainerLength = pizzaContainer.length;
         var dx = determineDx(pizzaContainerLength[i], size);
         var newwidth = (pizzaContainerLength[i].offsetWidth + dx) + 'px';
+    function changePizzaSizes(size) {
         for (var i = 0; i < pizzaContainerLength; i++) {
             pizzaContainerLength[i].style.width = newwidth;
         }
