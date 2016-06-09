@@ -6,7 +6,11 @@
     <meta http-equiv="Cache-control" content="max-age=3600, must-revalidate, public">
   <!--<link rel="stylesheet" href="css/style.css">-->
   <!--<link rel="stylesheet" href="css/bootstrap-grid.css">-->
-<script>
+<link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+<link rel="preload" href="css/bootstrap-grid.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/bootstrap-grid.css"></noscript>
+<!--  <script>
 var cb = function() {
 var l = document.createElement('link'); l.rel = 'stylesheet';
 l.href = 'css/style.css';
@@ -16,8 +20,8 @@ var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 webkitRequestAnimationFrame || msRequestAnimationFrame;
 if (raf) raf(cb);
 else window.addEventListener('load', cb);
-</script>
-<script>
+</script>-->
+<!--<script>
 var cb = function() {
 var l = document.createElement('link'); l.rel = 'stylesheet';
 l.href = 'css/bootstrap-grid.css';
@@ -27,7 +31,7 @@ var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 webkitRequestAnimationFrame || msRequestAnimationFrame;
 if (raf) raf(cb);
 else window.addEventListener('load', cb);
-</script>
+</script>-->
 </head>
 
 <body>
