@@ -293,14 +293,7 @@ var timeToGenerate = window.performance.getEntriesByName("measure_pizza_generati
 console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "ms");
 var frame = 0;
 
-function logAverageFrame(times) {
-    var numberOfEntries = times.length;
-    var sum = 0;
-    for (var i = numberOfEntries - 1; i > numberOfEntries - 11; i--) {
-        sum = sum + times[i].duration;
-    }
-    console.log("Average time to generate last 10 frames: " + sum / 10 + "ms");
-}
+// I removed logAverageFrame(times)
 
 function updatePositions() {
     frame++;
